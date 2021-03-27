@@ -1,0 +1,93 @@
+.home {
+  background-image: url(http://localhost/acb/wp-content/uploads/2021/03/01_Home.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  h1 {
+    color: #f2f4f3;
+    text-transform: uppercase;
+  }
+
+  .hero {
+  }
+}
+.hero {
+  height: 40vh;
+}
+
+.acb-about {
+  min-height: 550px;
+  .about-bkg {
+    background-image: url(http://localhost/acb/wp-content/uploads/2021/03/abou_updatedt.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // min-height: 40vh;
+  }
+  .about-copy {
+    flex-wrap: wrap;
+    align-content: center;
+    display: flex;
+  }
+}
+
+.acb-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  .home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.home-break {
+  padding: 2rem;
+  text-align: center;
+  color: #00245d;
+  text-transform: capitalize;
+}
+.shop-wrap {
+  // display: flex;
+  min-height: 470px;
+  .home-shop-bkg {
+    background-image: url("http://localhost/acb/wp-content/uploads/2021/03/shop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-shop-copy {
+    background: #00245d;
+    color: #f2f4f3;
+    display: flex;
+    a {
+      color: #f2f4f3;
+      text-decoration: none;
+      &:hover {
+        color: #ffd200;
+      }
+    }
+  }
+}
+.vp-wrap {
+  // display: flex;
+  min-height: 470px;
+  .home-vp-bkg {
+    background-image: url("http://localhost/acb/wp-content/uploads/2021/03/vp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .home-vp-copy {
+    background: #00245d;
+    color: #f2f4f3;
+    display: flex;
+    a {
+      color: #f2f4f3;
+      text-decoration: none;
+      &:hover {
+        color: #ffd200;
+      }
+    }
+  }
+}
+.home-break {
+  font-size: 1.8rem;
+  text-shadow: none;
+}
