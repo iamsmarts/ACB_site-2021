@@ -1,7 +1,7 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo';
-import { BrowserRouter, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 
 
 import './App.scss'
@@ -10,7 +10,6 @@ import Vp from './vp/vp.component'
 import About from './About/about.component'
 import Faq from './FAQ/faq.component'
 import Footer from './Footer/Footer.component'
-import Header from './Header/header.component'
 import HeaderClass from './Header/headerClass.component'
 import Home from './Home/Home.component'
 const client = new ApolloClient({
