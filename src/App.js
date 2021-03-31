@@ -16,7 +16,6 @@ import Home from './Home/Home.component'
 const client = new ApolloClient({
   uri: 'http://data.angelcitybrigade.net/graphql/',
   cache: new InMemoryCache(),
-  credentials: 'Access-Control-Allow-Origin'
 })
 
 function App() {
