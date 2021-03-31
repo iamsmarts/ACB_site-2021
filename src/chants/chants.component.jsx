@@ -32,7 +32,7 @@ const Chants = () =>(
           console.log(error)
         }
         if(data.chants){
-          console.log(data.chants.edges.length)
+
           return(
             <div className="row">
               <div className="container clearTop chants-containter">
