@@ -1,6 +1,7 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
-import {ApolloProvider,InMemoryCache} from 'react-apollo';
+import {ApolloProvider} from 'react-apollo';
+import { InMemoryCache } from "apollo-cache-inmemory";
 import { BrowserRouter, Route} from 'react-router-dom';
 
 
