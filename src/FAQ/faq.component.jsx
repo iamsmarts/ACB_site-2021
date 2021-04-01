@@ -23,6 +23,18 @@ const Faq = () =>(
         }
       }
     }
+    heroBackgrounds {
+      edges {
+        node {
+          hbkgMeta {
+            heroPage
+            heroBackground {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
   }
   `
   }>
@@ -36,10 +48,16 @@ const Faq = () =>(
           return<h1>something broke</h1>
         }
         if (data) {
-          console.log(data.faqs.edges)
+          let bkg;
+          data.heroBackgrounds.edges.map((hbkg, key)=>{
+            if (hbkg.node.hbkgMeta.heroPage === 'FAQ') {
+             bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+            }
+            return bkg
+          })
           return(
             <div className="row faq-wrap">
-              <div className="container clearTop faq-hero">
+              <div className="container clearTop faq-hero"style={{backgroundImage:`url(${bkg})`}} >
                 <div className="row faq-copy-wrap justify-content-center align-items-center">
                   <div className="col-10 col-md-6 text-center">
                     <h2>FAQs / Contact Us</h2>
@@ -72,7 +90,7 @@ const Faq = () =>(
                 <div className="col-6">
                   <h3>Contact Us</h3>
                   <p>
-                  <i class="fas fa-map-marker-alt"></i> PMB # 418 <br/>
+                  <i className="fas fa-map-marker-alt"></i> PMB # 418 <br/>
                     335 E Albertoni St <br/>
                     Ste 200 <br/>
                     Carson, CA 90746

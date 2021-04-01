@@ -27,6 +27,18 @@ const About = () =>(
         }
       }
     }
+    heroBackgrounds {
+      edges {
+        node {
+          hbkgMeta {
+            heroPage
+            heroBackground {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
   }`
   }>
     {
@@ -38,10 +50,16 @@ const About = () =>(
           console.log(error)
         }
         if (data) {
-          console.log(data.boardMembers.edges)
+          let bkg;
+          data.heroBackgrounds.edges.map((hbkg, key)=>{
+            if (hbkg.node.hbkgMeta.heroPage === 'About') {
+              bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+            }
+            return bkg
+          })
           return <div className="row">
-            <div className="container clearTop about-hero">
-              <div className="row hero-wrap justify-content-center align-items-center">
+            <div className="container clearTop about-hero" style={{backgroundImage:`url(${bkg})`}}>
+              <div className="row hero-wrap justify-content-center align-items-center" >
                 <div className="col-12 col-md-10 text-center">
                   <h2>ABOUT ACB</h2>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo';
-
+import { InMemoryCache } from "apollo-cache-inmemory";
 import { BrowserRouter, Route} from 'react-router-dom';
 
 
@@ -15,6 +15,7 @@ import HeaderClass from './Header/headerClass.component'
 import Home from './Home/Home.component'
 const client = new ApolloClient({
   uri: 'http://data.angelcitybrigade.net/graphql/',
+  cache: new InMemoryCache(),
 })
 
 function App() {

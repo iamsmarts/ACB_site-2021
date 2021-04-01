@@ -19,6 +19,18 @@ const Chants = () =>(
         }
       }
     }
+    heroBackgrounds {
+      edges {
+        node {
+          hbkgMeta {
+            heroPage
+            heroBackground {
+              sourceUrl
+            }
+          }
+        }
+      }
+    }
   }
 
   `
@@ -32,10 +44,16 @@ const Chants = () =>(
           console.log(error)
         }
         if(data.chants){
-
+          let bkg;
+          data.heroBackgrounds.edges.map((hbkg, key)=>{
+            if (hbkg.node.hbkgMeta.heroPage === 'Chants') {
+             bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+            }
+            return bkg
+          })
           return(
             <div className="row">
-              <div className="container clearTop chants-containter">
+              <div className="container clearTop chants-containter" style={{backgroundImage:`url(${bkg})`}}>
                 <div className="row chant-sheet justify-content-center">
                   <div className="col-12 col-md-6">
                   <h2>ACB Chants</h2>

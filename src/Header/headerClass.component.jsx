@@ -10,8 +10,9 @@ class HeaderClass extends Component {
     this.setState({
       open:!this.state.open
     })
-    console.log('open')
+
   }
+
   render() {
     return (
       <div className="container header-wrap">
@@ -34,7 +35,8 @@ class HeaderClass extends Component {
           </div>
         </div>
         <div className={`menu ${this.state.open ? 'menu-opened' : 'menu-closed'}`}>
-          <div className=" nav-item"><Link to='/'> Home</Link></div>
+          <div className=" nav-item">
+            <Link to='/'> Home</Link></div>
           <div className=" nav-item"><a href="https://shop.angelcitybrigade.net" rel="noreferrer" target="_blank"> Shop </a></div>
           <div className=" nav-item"> <Link to="/chants"> Chants</Link></div>
           <div className="-md-auto nav-item"> <Link to="/viewing-parties"> Viewing Parties</Link></div>
