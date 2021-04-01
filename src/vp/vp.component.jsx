@@ -15,6 +15,7 @@ const Vp = ()=>(
             heroBackground {
               sourceUrl
             }
+            heroTitle
           }
         }
       }
@@ -32,20 +33,21 @@ const Vp = ()=>(
         return<h1>something broke</h1>
       }
       if(data){
-        let bkg;
+        let bkg, heroTt;
         data.heroBackgrounds.edges.map((hbkg, key)=>{
           if (hbkg.node.hbkgMeta.heroPage === 'VP') {
             bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+            heroTt = hbkg.node.hbkgMeta.heroTitle
           }
           return bkg
         })
         return(
           <div className="row vp-wrap">
             <div className="container clearTop vp-hero" style={{backgroundImage:`url(${bkg})`}}>
-            <div className="row justify-content-md-center align-items-center text-center vp-copy">
-              <div className="col-10 col-md-6">
-                <h2>Viewing Parties</h2>
-              </div>
+            <div className="row align-items-center vp-copy">
+            <div className="col-12 col-md-10">
+                <h2>{heroTt}</h2>
+                </div>
             </div>
 
             </div>

@@ -16,6 +16,7 @@ const Home = ()=>(
             heroBackground {
               sourceUrl
             }
+            heroTitle
           }
         }
       }
@@ -33,10 +34,11 @@ const Home = ()=>(
         return<h1>something broke</h1>
       }
       if(data){
-        let bkg;
+        let bkg, heroTt;
         data.heroBackgrounds.edges.map((hbkg, key)=>{
           if (hbkg.node.hbkgMeta.heroPage === 'Home') {
             bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+            heroTt = hbkg.node.hbkgMeta.heroTitle
           }
           return bkg
         })
@@ -44,8 +46,8 @@ const Home = ()=>(
           <div className="row">
             <div className="container clearTop home" style={{backgroundImage:`url(${bkg})`}}>
               <div className="row hero align-items-center">
-                <div className="col-12 col-md-6">
-                  <h1>Angel City Brigade</h1>
+                <div className="col-12 col-md-10">
+                <h1>{heroTt}</h1>
                   <Link className="btn btn-light" to="/chants">Join Us</Link>
                 </div>
               </div>

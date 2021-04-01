@@ -27,6 +27,7 @@ const Chants = () =>(
             heroBackground {
               sourceUrl
             }
+            heroTitle
           }
         }
       }
@@ -44,20 +45,22 @@ const Chants = () =>(
           console.log(error)
         }
         if(data.chants){
-          let bkg;
+          let bkg, heroTt;
           data.heroBackgrounds.edges.map((hbkg, key)=>{
             if (hbkg.node.hbkgMeta.heroPage === 'Chants') {
+              console.log(hbkg.node.hbkgMeta.heroTitle)
              bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+             heroTt = hbkg.node.hbkgMeta.heroTitle
             }
             return bkg
           })
           return(
             <div className="row">
               <div className="container clearTop chants-containter" style={{backgroundImage:`url(${bkg})`}}>
-                <div className="row chant-sheet justify-content-center">
-                  <div className="col-12 col-md-6">
-                  <h2>ACB Chants</h2>
-                  <a href="http://localhost/acb/wp-content/uploads/2021/03/118574113_350102809354165_2053583023785038534_n.jpg" download className="btn btn-light"><i class="far fa-file-pdf"></i> Download the chant sheet</a>
+                <div className="row chant-sheet align-items-center">
+                  <div className="col-12 col-md-10">
+                  <h2>{heroTt}</h2>
+                  <a href="http://data.angelcitybrigade.net/wp-content/uploads/2021/03/ACB121-Chants-2019.pdf" download className="btn btn-light"><i class="far fa-file-pdf"></i> Download the chant sheet</a>
                   </div>
                 </div>
               </div>

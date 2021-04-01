@@ -31,6 +31,7 @@ const Faq = () =>(
             heroBackground {
               sourceUrl
             }
+            heroTitle
           }
         }
       }
@@ -48,19 +49,20 @@ const Faq = () =>(
           return<h1>something broke</h1>
         }
         if (data) {
-          let bkg;
+          let bkg, heroTt;
           data.heroBackgrounds.edges.map((hbkg, key)=>{
             if (hbkg.node.hbkgMeta.heroPage === 'FAQ') {
              bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+             heroTt = hbkg.node.hbkgMeta.heroTitle
             }
             return bkg
           })
           return(
             <div className="row faq-wrap">
               <div className="container clearTop faq-hero"style={{backgroundImage:`url(${bkg})`}} >
-                <div className="row faq-copy-wrap justify-content-center align-items-center">
-                  <div className="col-10 col-md-6 text-center">
-                    <h2>FAQs / Contact Us</h2>
+                <div className="row faq-copy-wrap align-items-center">
+                  <div className="col-12 col-md-10">
+                  <h2>{heroTt}</h2>
                   </div>
                 </div>
               </div>

@@ -35,6 +35,7 @@ const About = () =>(
             heroBackground {
               sourceUrl
             }
+            heroTitle
           }
         }
       }
@@ -50,18 +51,19 @@ const About = () =>(
           console.log(error)
         }
         if (data) {
-          let bkg;
+          let bkg, heroTt;
           data.heroBackgrounds.edges.map((hbkg, key)=>{
             if (hbkg.node.hbkgMeta.heroPage === 'About') {
               bkg = hbkg.node.hbkgMeta.heroBackground.sourceUrl
+              heroTt = hbkg.node.hbkgMeta.heroTitle
             }
             return bkg
           })
           return <div className="row">
             <div className="container clearTop about-hero" style={{backgroundImage:`url(${bkg})`}}>
-              <div className="row hero-wrap justify-content-center align-items-center" >
-                <div className="col-12 col-md-10 text-center">
-                  <h2>ABOUT ACB</h2>
+              <div className="row hero-wrap  align-items-center" >
+                <div className="col-12 col-md-10">
+                <h2>{heroTt}</h2>
 
                 </div>
               </div>
@@ -77,7 +79,7 @@ const About = () =>(
                 <h3>The Board</h3>
               </div>
               {data.boardMembers.edges.map((member, key)=>{
-                console.log(key)
+
                 return (
                   <div key={key} className={(key < 3) ? 'col-6 col-md-4 bmember' : 'col-6 col-md-3 bmember' }>
                     <img className="img-fluid img-thumbnail" src={member.node.boardMemberMeta.boardMemberPhoto.sourceUrl} alt=""/>
