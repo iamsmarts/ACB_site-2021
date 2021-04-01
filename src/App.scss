@@ -18,6 +18,7 @@ h4 {
 
 .clearTop {
   padding-top: 73px;
+  position: relative;
 }
 
 .btn-light {
@@ -31,4 +32,16 @@ h4 {
   background-color: #00245d;
   border-color: #003790;
   text-transform: uppercase;
+}
+.hero {
+  z-index: 10;
+}
+.tint {
+  background: rgba(0, 36, 93, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
 }

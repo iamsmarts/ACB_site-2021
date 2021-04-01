@@ -61,7 +61,8 @@ const About = () =>(
           })
           return <div className="row">
             <div className="container clearTop about-hero" style={{backgroundImage:`url(${bkg})`}}>
-              <div className="row hero-wrap  align-items-center" >
+              <div className="tint"></div>
+              <div className="row hero hero-wrap  align-items-center" >
                 <div className="col-12 col-md-10">
                 <h2>{heroTt}</h2>
 

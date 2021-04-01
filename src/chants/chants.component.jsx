@@ -57,7 +57,8 @@ const Chants = () =>(
           return(
             <div className="row">
               <div className="container clearTop chants-containter" style={{backgroundImage:`url(${bkg})`}}>
-                <div className="row chant-sheet align-items-center">
+                <div className="tint"></div>
+                <div className="row hero chant-sheet align-items-center">
                   <div className="col-12 col-md-10">
                   <h2>{heroTt}</h2>
                   <a href="http://data.angelcitybrigade.net/wp-content/uploads/2021/03/ACB121-Chants-2019.pdf" download className="btn btn-light"><i class="far fa-file-pdf"></i> Download the chant sheet</a>

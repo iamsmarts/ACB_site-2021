@@ -45,6 +45,7 @@ const Home = ()=>(
         return (
           <div className="row">
             <div className="container clearTop home" style={{backgroundImage:`url(${bkg})`}}>
+              <div className="tint"></div>
               <div className="row hero align-items-center">
                 <div className="col-12 col-md-10">
                 <h1>{heroTt}</h1>

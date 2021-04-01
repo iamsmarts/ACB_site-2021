@@ -60,7 +60,8 @@ const Faq = () =>(
           return(
             <div className="row faq-wrap">
               <div className="container clearTop faq-hero"style={{backgroundImage:`url(${bkg})`}} >
-                <div className="row faq-copy-wrap align-items-center">
+                <div className="tint"></div>
+                <div className="row hero faq-copy-wrap align-items-center">
                   <div className="col-12 col-md-10">
                   <h2>{heroTt}</h2>
                   </div>

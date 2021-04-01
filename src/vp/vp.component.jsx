@@ -44,7 +44,8 @@ const Vp = ()=>(
         return(
           <div className="row vp-wrap">
             <div className="container clearTop vp-hero" style={{backgroundImage:`url(${bkg})`}}>
-            <div className="row align-items-center vp-copy">
+              <div className="tint"></div>
+            <div className="row hero align-items-center vp-copy">
             <div className="col-12 col-md-10">
                 <h2>{heroTt}</h2>
                 </div>
