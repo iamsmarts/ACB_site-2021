@@ -61,7 +61,7 @@ const Chants = () =>(
                 <div className="row hero chant-sheet align-items-center">
                   <div className="col-12 col-md-10">
                   <h2>{heroTt}</h2>
-                  <a href="http://data.angelcitybrigade.net/wp-content/uploads/2021/03/ACB121-Chants-2019.pdf" download className="btn btn-light"><i class="far fa-file-pdf"></i> Download the chant sheet</a>
+                  <a href="https://data.angelcitybrigade.net/wp-content/uploads/2021/03/ACB121-Chants-2019.pdf" download className="btn btn-light"><i class="far fa-file-pdf"></i> Download the chant sheet</a>
                   </div>
                 </div>
               </div>

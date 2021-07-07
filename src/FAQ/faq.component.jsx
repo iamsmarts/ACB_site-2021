@@ -88,7 +88,7 @@ const Faq = () =>(
               </div>
               <div className="row">
                 <div className="col-6">
-                  <img className="img-fluid" src="http://localhost/acb/wp-content/uploads/2021/03/101200961_1455871071258939_1684034725609648687_n.jpg" alt=""/>
+                  <img className="img-fluid" src="https://localhost/acb/wp-content/uploads/2021/03/101200961_1455871071258939_1684034725609648687_n.jpg" alt=""/>
                 </div>
                 <div className="col-6">
                   <h3>Contact Us</h3>

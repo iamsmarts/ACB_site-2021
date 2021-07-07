@@ -18,7 +18,7 @@ class HeaderClass extends Component {
       <div className="container header-wrap">
         <div className="row header">
           <div className="col-6 align-self-start align-items-center logo">
-            <img src="http://localhost/acb/wp-content/uploads/2021/03/logo.png" alt=""/>
+            <img src="https://localhost/acb/wp-content/uploads/2021/03/logo.png" alt=""/>
           </div>
           <div className="col-6 align-self-end nav">
             <HamburgerMenu
